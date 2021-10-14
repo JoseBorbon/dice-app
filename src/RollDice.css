@@ -1,0 +1,17 @@
+.RollDice {
+  display: flex;
+  flex-flow: column;
+}
+
+.RollDice-container {
+  display: flex;
+  justify-content: center;
+}
+
+.RollDice-container > * {
+  margin: 40px;
+}
+
+.RollDice button {
+  align-self: center;
+}
