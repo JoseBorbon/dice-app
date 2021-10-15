@@ -24,10 +24,11 @@
 
 .RollDice button:hover {
   background-color: rebeccapurple;
+  cursor: pointer;
 }
 
-i {
-  color: rgba(142, 82, 221, 0.992);
+.RollDice-disable {
+  cursor: not-allowed !important;
 }
 
 .RollDice-shake {
