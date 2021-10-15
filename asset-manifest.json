@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/dice-app/static/css/main.121f9cc3.chunk.css",
-    "main.js": "/dice-app/static/js/main.b0ae4bc9.chunk.js",
-    "main.js.map": "/dice-app/static/js/main.b0ae4bc9.chunk.js.map",
+    "main.css": "/dice-app/static/css/main.b903936d.chunk.css",
+    "main.js": "/dice-app/static/js/main.89907345.chunk.js",
+    "main.js.map": "/dice-app/static/js/main.89907345.chunk.js.map",
     "runtime-main.js": "/dice-app/static/js/runtime-main.b2266524.js",
     "runtime-main.js.map": "/dice-app/static/js/runtime-main.b2266524.js.map",
     "static/js/2.710ad409.chunk.js": "/dice-app/static/js/2.710ad409.chunk.js",
     "static/js/2.710ad409.chunk.js.map": "/dice-app/static/js/2.710ad409.chunk.js.map",
     "index.html": "/dice-app/index.html",
-    "static/css/main.121f9cc3.chunk.css.map": "/dice-app/static/css/main.121f9cc3.chunk.css.map",
+    "static/css/main.b903936d.chunk.css.map": "/dice-app/static/css/main.b903936d.chunk.css.map",
     "static/js/2.710ad409.chunk.js.LICENSE.txt": "/dice-app/static/js/2.710ad409.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.b2266524.js",
     "static/js/2.710ad409.chunk.js",
-    "static/css/main.121f9cc3.chunk.css",
-    "static/js/main.b0ae4bc9.chunk.js"
+    "static/css/main.b903936d.chunk.css",
+    "static/js/main.89907345.chunk.js"
   ]
 }
