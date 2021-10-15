@@ -3,6 +3,9 @@ import Die from './Die';
 import './RollDice.css';
 
 class RollDice extends Component {
+  static defaultProps = {
+    diceMap: ['one', 'two', 'three', 'four', 'five', 'six'],
+  };
   constructor(props) {
     super(props);
     this.state = {
@@ -10,19 +13,19 @@ class RollDice extends Component {
       dice2: 'six',
       isShaking: false,
     };
-    // this.roll = this.roll.bind(this);
-    // this.removeShake = this.removeShake.bind(this);
     this.handleClick = this.handleClick.bind(this);
   }
 
-  static defaultProps = {
-    diceMap: ['one', 'two', 'three', 'four', 'five', 'six'],
-  };
-
   roll() {
     this.setState({
-      dice1: RollDice.defaultProps.diceMap[Math.floor(Math.random() * 6)],
-      dice2: RollDice.defaultProps.diceMap[Math.floor(Math.random() * 6)],
+      dice1:
+        RollDice.defaultProps.diceMap[
+          Math.floor(Math.random() * this.props.diceMap.length)
+        ],
+      dice2:
+        RollDice.defaultProps.diceMap[
+          Math.floor(Math.random() * this.props.diceMap.length)
+        ],
       isShaking: true,
     });
   }
@@ -53,7 +56,11 @@ class RollDice extends Component {
             className={this.state.isShaking ? 'RollDice-shake' : ''}
           />
         </div>
-        <button onClick={this.handleClick}>
+        <button
+          onClick={this.handleClick}
+          disabled={this.state.isShaking}
+          className={this.state.isShaking ? 'RollDice-disable' : ''}
+        >
           {this.state.isShaking ? 'Rolling Dice OH MY EF GEE~' : 'Roll Dice!'}
         </button>
       </div>
