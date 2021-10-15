@@ -1,16 +1,10 @@
 import React, { Component } from 'react';
+import './Die.css';
 
 class Die extends Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     const input = `fas fa-dice-${this.props.diceNumber} fa-5x`;
-    return (
-      <div>
-        <i className={`${input} ${this.props.className}`}></i>
-      </div>
-    );
+    return <i className={`Die ${input} ${this.props.className}`}></i>;
   }
 }
 
