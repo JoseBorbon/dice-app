@@ -5,31 +5,58 @@ import './RollDice.css';
 class RollDice extends Component {
   constructor(props) {
     super(props);
-    this.defaultProps = {
-      diceMap: ['one', 'two', 'three', 'four', 'five', 'six'],
-    };
     this.state = {
       dice1: 'six',
       dice2: 'six',
+      isShaking: false,
     };
-    this.roll = this.roll.bind(this);
+    // this.roll = this.roll.bind(this);
+    // this.removeShake = this.removeShake.bind(this);
+    this.handleClick = this.handleClick.bind(this);
   }
+
+  static defaultProps = {
+    diceMap: ['one', 'two', 'three', 'four', 'five', 'six'],
+  };
 
   roll() {
     this.setState({
-      dice1: this.defaultProps.diceMap[Math.floor(Math.random() * 6)],
-      dice2: this.defaultProps.diceMap[Math.floor(Math.random() * 6)],
+      dice1: RollDice.defaultProps.diceMap[Math.floor(Math.random() * 6)],
+      dice2: RollDice.defaultProps.diceMap[Math.floor(Math.random() * 6)],
+      isShaking: true,
     });
   }
+
+  removeShake() {
+    if (this.state.isShaking === false) {
+      setTimeout(() => {
+        this.setState({ isShaking: false });
+      }, 1000);
+    }
+  }
+
+  handleClick() {
+    this.roll();
+    this.removeShake();
+  }
+
+  //we append the class on click
+  //1 second later, we remove the class
 
   render() {
     return (
       <div className="RollDice">
         <div className="RollDice-container">
-          <Die diceNumber={this.state.dice1} />
-          <Die diceNumber={this.state.dice2} />
+          <Die
+            diceNumber={this.state.dice1}
+            className={this.state.isShaking ? 'RollDice-shake' : ''}
+          />
+          <Die
+            diceNumber={this.state.dice2}
+            className={this.state.isShaking ? 'RollDice-shake' : ''}
+          />
         </div>
-        <button onClick={this.roll}>Roll Dice!</button>
+        <button onClick={this.handleClick}>Roll Dice!</button>
       </div>
     );
   }
