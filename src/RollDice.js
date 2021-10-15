@@ -40,9 +40,6 @@ class RollDice extends Component {
     this.removeShake();
   }
 
-  //we append the class on click
-  //1 second later, we remove the class
-
   render() {
     return (
       <div className="RollDice">
@@ -56,7 +53,9 @@ class RollDice extends Component {
             className={this.state.isShaking ? 'RollDice-shake' : ''}
           />
         </div>
-        <button onClick={this.handleClick}>Roll Dice!</button>
+        <button onClick={this.handleClick}>
+          {this.state.isShaking ? 'Rolling Dice OH MY EF GEE~' : 'Roll Dice!'}
+        </button>
       </div>
     );
   }
